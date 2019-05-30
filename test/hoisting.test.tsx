@@ -20,7 +20,7 @@ describe('hoisting', () => {
         var foo = function bar() {
         };
     });
-
+/*
     it('not ReferenceError, but TypeError', () => {
         foo();
         var foo = function bar() {
@@ -70,5 +70,5 @@ describe('hoisting', () => {
             function foo() { console.log( "b" ); }
         }
     });
-    
+    */
 });

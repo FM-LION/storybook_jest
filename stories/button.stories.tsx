@@ -12,7 +12,7 @@ storiesOf('Button', module)
   .addDecorator(withTests({ results }))
   .add('with text', () => (
     <Button text={text('Label', 'Hello Storybook')} action={actionOjb}/>
-  ),{jest: ['button.test.tsx']})
+  ),{jest: ['button.test.tsx','hoisting.test.tsx']})
   .add('with emoji', () => (
     <Button text={text('abc', '😀 😎 👍 💯')}/>
   ));  
