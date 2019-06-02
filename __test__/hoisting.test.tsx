@@ -2,10 +2,11 @@ import { number } from "prop-types";
 
 describe('hoisting', () => {
     it('undefined or ReferenceError: a is not defined ?? ', () => {
+        //reveived => expected
         expect(a).toEqual(undefined);
         var a = 2;
     });
-
+/*
     it('function', () => {
         foo();
         function foo() {
@@ -20,7 +21,7 @@ describe('hoisting', () => {
         var foo = function bar() {
         };
     });
-/*
+
     it('not ReferenceError, but TypeError', () => {
         foo();
         var foo = function bar() {
@@ -71,4 +72,8 @@ describe('hoisting', () => {
         }
     });
     */
+
+
+
+
 });
