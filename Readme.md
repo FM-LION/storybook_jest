@@ -5,14 +5,6 @@
 ## 我知道你懂 hoisting，可是你了解到多深？
 > https://blog.techbridge.cc/2018/11/10/javascript-hoisting/
 
-#### hoisting 定義
-> https://developer.mozilla.org/zh-TW/docs/Glossary/Hoisting
-
-> https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/231778/
-
-#### 編譯與直譯
-> https://medium.com/@totoroLiu/%E7%B7%A8%E8%AD%AF%E8%AA%9E%E8%A8%80-vs-%E7%9B%B4%E8%AD%AF%E8%AA%9E%E8%A8%80-5f34e6bae051
-
 ---
 
 # Chapter 5: Scope Closure
@@ -21,31 +13,33 @@
 
 ## 談 JS 中的作用域與 Closure
 > https://blog.techbridge.cc/2018/12/08/javascript-closure/
-
-## Module Pattern
-> https://ithelp.ithome.com.tw/articles/10204096
-
-## 現在模組跟未來模組
-
-#### Lexical Scope 定義
-> https://ithelp.ithome.com.tw/articles/10194745
-
-### Closure 定義
-> https://openhome.cc/Gossip/JavaScript/Closure.html
-
-## Modules
-> https://juejin.im/post/5c43f73251882523f0261b57
-> https://ithelp.ithome.com.tw/articles/10207894?sc=iThelpR
+> https://cythilya.github.io/2018/10/22/closure/
 
 ---
 
-# 附錄
-## overview
+# 補充
+## 概論
 https://cythilya.github.io/2018/10/10/intro-2/
 
 ## 變數宣告
 + Uncaught ReferenceError(TypeError) 、undefined、null
 > http://www.jstips.co/zh_tw/javascript/differences-between-undefined-and-null/
+
+## Lexical Scope 定義
+> https://ithelp.ithome.com.tw/articles/10194745
+
+## Closure 定義
+> https://openhome.cc/Gossip/JavaScript/Closure.html
+
+## Module Pattern
+> https://ithelp.ithome.com.tw/articles/10204096
+
+## Modules
+> https://juejin.im/post/5c43f73251882523f0261b57
+> https://ithelp.ithome.com.tw/articles/10207894?sc=iThelpR
+
+## 編譯與直譯
+> https://medium.com/@totoroLiu/%E7%B7%A8%E8%AD%AF%E8%AA%9E%E8%A8%80-vs-%E7%9B%B4%E8%AD%AF%E8%AA%9E%E8%A8%80-5f34e6bae051
 
 
 # 環境安裝
@@ -90,6 +84,7 @@ https://stackoverflow.com/questions/39066298/webpack-dev-server-hot-reload-not-w
 ---
 
 # Next
++ Design Pattern
 + testcafe (UI Test)
 + gastby (靜態網頁產生器)
 + graphQL (REST)
