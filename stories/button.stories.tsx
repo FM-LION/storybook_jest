@@ -10,6 +10,7 @@ import * as results from '../jest-test-results.json';
 let actionOjb = action('onClick');
 storiesOf('Button', module)
   .addDecorator(withTests({ results }))
+  .addDecorator(withKnobs)
   .add('with text', () => (
     <Button text={text('Label', 'Hello Storybook')} action={actionOjb}/>
   ),{jest: ['button.test.tsx','hoisting.test.tsx','scope_closure.test.tsx']})

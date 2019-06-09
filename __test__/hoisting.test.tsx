@@ -6,7 +6,7 @@ describe('hoisting', () => {
         expect(a).toEqual(undefined);
         var a = 2;
     });
-/*
+
     it('function', () => {
         foo();
         function foo() {
@@ -71,9 +71,5 @@ describe('hoisting', () => {
             function foo() { console.log( "b" ); }
         }
     });
-    */
-
-
-
 
 });

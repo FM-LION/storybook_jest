@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow, configure } from 'enzyme';
 import * as ReactSixteenAdapter from 'enzyme-adapter-react-16';
 import Button from '../components/Button';
-import sum from '../components/Sum';
+import sum,{minus, mutiple} from '../components/Sum';
 
 //fixed https://github.com/airbnb/enzyme/issues/1284
 const adapter = ReactSixteenAdapter as any;
@@ -11,7 +11,10 @@ configure({ adapter: new adapter.default() });
 describe('測試', () => {
   it('test 1 plus 2 result', () => {
     expect(sum(1 , 2)).toBe(3);
+    expect(minus(1 , 2)).toBe(-1);
+    expect(mutiple(1 , 2)).toBe(2);
   })
+
 
   it('Button snapshot', ()=> {
     const mockCallBack = jest.fn();
