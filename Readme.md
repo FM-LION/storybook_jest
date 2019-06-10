@@ -13,13 +13,14 @@
 
 ## 談 JS 中的作用域與 Closure
 > https://blog.techbridge.cc/2018/12/08/javascript-closure/
+
 > https://cythilya.github.io/2018/10/22/closure/
 
 ---
 
 # 補充
 ## 概論
-https://cythilya.github.io/2018/10/10/intro-2/
+> https://cythilya.github.io/2018/10/10/intro-2/
 
 ## 變數宣告
 + Uncaught ReferenceError(TypeError) 、undefined、null
