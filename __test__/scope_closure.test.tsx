@@ -1,6 +1,6 @@
 describe('scope closure', () => {
 
-    it('Closure ?', () => {
+    it('1. 算閉包嗎?', () => {
         function foo() {
             var a = 2;
         
@@ -14,7 +14,7 @@ describe('scope closure', () => {
         foo();
     });
 
-    it('Closure!', () => {
+    it('2. 這是閉包!', () => {
         function foo() {
             var a = 2;
         
@@ -30,7 +30,46 @@ describe('scope closure', () => {
         baz();
     });
 
-    it('setTimeout', (done)=> {
+    it('3. 這也是閉包!', () => {
+        function foo() {
+            var a = 2;
+        
+            function baz() {
+                expect(a).toEqual(2);
+            }
+        
+            bar( baz );
+        }
+        
+        function bar(fn) {
+            fn(); // look ma, I saw closure!
+        }
+
+        foo();
+    });
+
+    it('4. 這也是閉包!', () => {
+        var fn;
+        function foo() {
+            var a = 2;
+
+            function baz() {
+                console.log( a );
+            }
+
+            fn = baz; // assign `baz` to global variable
+        }
+
+        function bar() {
+            fn(); // look ma, I saw closure!
+        }
+
+        foo();
+
+        bar(); // 2
+    });
+
+    it('5. setTimeout', (done)=> {
         function wait(message) {
             jest.useFakeTimers();
             setTimeout( function timer(){
@@ -42,7 +81,21 @@ describe('scope closure', () => {
         wait( "Hello, closure!" );
     })
 
-    it('IIFE', () => {
+    /*
+    it('6. jQuery Event', ()=> {
+        function setupBot(name,selector) {
+            $( selector ).click( function activator(){
+                console.log( "Activating: " + name );
+            } );
+        }
+        
+        setupBot( "Closure Bot 1", "#bot_1" );
+        setupBot( "Closure Bot 2", "#bot_2" );
+    })
+    */
+    
+
+    it('7. IIFE', () => {
         var a = 2;
 
         (function IIFE(){
@@ -50,7 +103,7 @@ describe('scope closure', () => {
         })();
     });
 
-    it('Loops + Closure', (done) => {
+    it('8. Loops + Closure', (done) => {
         jest.useFakeTimers();
         for (var i=1; i<=5; i++) {
             setTimeout( function timer(){
@@ -61,7 +114,7 @@ describe('scope closure', () => {
         jest.runAllTimers();
     });
 
-    it('Loops + Closure IIFE', (done) => {
+    it('9. Loops + Closure IIFE', (done) => {
         jest.useFakeTimers();
         for (var i=1; i<=5; i++) {
             (function(){
@@ -70,10 +123,11 @@ describe('scope closure', () => {
                     done();
                 }, i*1000 );
             })();
-        }        jest.runAllTimers();
+        }       
+        jest.runAllTimers();
     });
 
-    it('Loops + Closure IIFE var j', (done) => {
+    it('10. Loops + Closure IIFE var j', (done) => {
         jest.useFakeTimers();
         for (var i=1; i<=5; i++) {
             (function(){
@@ -88,8 +142,35 @@ describe('scope closure', () => {
         jest.runAllTimers();
     });
 
+    it('11. Loops + Closure IIFE pass i', () => {
+        for (var i=1; i<=5; i++) {
+            (function(j){
+                setTimeout( function timer(){
+                    console.log( j );
+                }, j*1000 );
+            })( i );
+        }
+    });
 
-    it('Revealing Module', () => {
+    it('12. Loops + Closure IIFE pass i', () => {
+        for (var i=1; i<=5; i++) {
+            let j = i; // yay, block-scope for closure!
+            setTimeout( function timer(){
+                console.log( j );
+            }, j*1000 );
+        }
+    });
+
+    it('13. Loops + Closure IIFE pass i', () => {
+        for (let i=1; i<=5; i++) {
+            setTimeout( function timer(){
+                console.log( i );
+            }, i*1000 );
+        }
+    });
+
+
+    it('14. Revealing Module', () => {
         function CoolModule(id) {
             function identify() {
                 console.log( id );
@@ -107,7 +188,7 @@ describe('scope closure', () => {
         foo2.identify(); // "foo 2"
     });
 
-    it('Modern Modules', ()=> {
+    it('15.Modern Modules', ()=> {
         var MyModules = (function Manager() {
             var modules = {};
         
