@@ -22,6 +22,27 @@ describe('hoisting', () => {
         };
     });
 
+    it('', () => {
+        function hoistFunction() {
+            foo(); // 2
+
+            var foo = function() {
+                console.log(1);
+            };
+
+            foo(); // 1
+
+            function foo() {
+                console.log(2);
+            }
+
+            foo(); // 1
+        }
+
+        hoistFunction();
+
+    })
+
     it('not ReferenceError, but TypeError', () => {
         foo();
         var foo = function bar() {
