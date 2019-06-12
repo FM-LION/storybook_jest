@@ -1,3 +1,5 @@
+不需要下載範例程式，今日讀書會期待峻維哥的表現
+
 # Chapter 4: Hoisting
 ## 原文
 > https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch4.md
@@ -44,6 +46,11 @@
 
 
 # 環境安裝
+```javascript
+//專案下載完後執行
+npm install
+```
+
 ## Install webpack 
 > https://ithelp.ithome.com.tw/articles/10200329?sc=iThelpR
 
