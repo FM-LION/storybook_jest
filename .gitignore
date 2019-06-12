@@ -4,6 +4,6 @@
 .idea?
 node_modules/*
 bundle/*
-jest-test-results.json
+# jest-test-results.json
 package-lock.json
 coverage/*

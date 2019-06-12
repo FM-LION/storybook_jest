@@ -6,10 +6,11 @@ import { action, withActions } from '@storybook/addon-actions';
 import { withTests } from '@storybook/addon-jest';
 import * as results from '../jest-test-results.json';
 
+const adapterTest = withTests({ results }) as any;
 
 let actionOjb = action('onClick');
 storiesOf('Button', module)
-  .addDecorator(withTests({ results }))
+  .addDecorator(adapterTest)
   .addDecorator(withKnobs)
   .add('with text', () => (
     <Button text={text('Label', 'Hello Storybook')} action={actionOjb}/>
